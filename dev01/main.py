@@ -3,10 +3,10 @@
 from flask import Flask
 app=Flask(__name__)
 
-app.route('/')
+@app.route('/')
 def index():
 	return "<h1>hello index</h1>"
-app.route('/user/<name>')
+@app.route('/user/<name>')
 def user(name):
 	return '<h1>hello %s !</h1>' %name
 
