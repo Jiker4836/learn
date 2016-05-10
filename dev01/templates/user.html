@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>User</title>
+</head>
+<body>
+	<h1>hello {{name}} index</h1>
+	<h1>hello {{name|capitalize}} index</h1>
+	<h1>hello {{name|upper}} index</h1>
+	<h1>
+		{% if name != 'world' %}
+			hello {{name}}
+		{% else %}
+			hello long
+		{%endif%}
+	</h1>
+</body>
+</html>
