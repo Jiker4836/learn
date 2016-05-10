@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #encoding=utf-8
-from flask import Flask,request,url_for
+from flask import Flask,request,url_for,render_template
 app=Flask(__name__)
 
 @app.route('/')
@@ -24,6 +24,13 @@ def hello_query():
 @app.route('/query_url')
 def query_url():
 	return 'query_url:'+url_for(query)
+
+# 模板引擎
+app.route('/calendar')
+def hell2():
+	content="hello 2"
+	return render_template("index.html",content=content) 
+
 
 if __name__ == '__main__':
 	# app.run(host='0.0.0.0',port=8000,debug=True)
