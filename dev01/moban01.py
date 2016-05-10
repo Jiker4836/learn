@@ -47,5 +47,10 @@ def one():
 def two():
 	return render_template('two_base.html')
 
+@app.route('/info')
+def get_info():
+	flash("hello fengye")
+	return render_template('index.html')
+
 if __name__ == '__main__':
 	m.run()
